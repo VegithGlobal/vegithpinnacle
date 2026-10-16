@@ -18,7 +18,7 @@ export default function PageHero({
   return (
     <section
       data-testid={testid}
-      className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden"
+      className="relative pt-28 pb-12 md:pt-40 md:pb-24 overflow-hidden"
     >
       {image && (
         <div className="absolute inset-0 -z-10">
@@ -37,13 +37,13 @@ export default function PageHero({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-2 text-xs text-white/55 uppercase tracking-[0.22em] font-semibold"
+          className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/55 uppercase tracking-[0.22em] font-semibold"
           aria-label="Breadcrumb"
           data-testid="page-breadcrumb"
         >
           <Link
             to="/"
-            className="flex items-center gap-1 hover:text-[#d4a843] transition-colors"
+            className="flex items-center gap-1 py-2 hover:text-[#d4a843] transition-colors"
           >
             <HomeIcon size={12} /> Home
           </Link>
@@ -72,7 +72,7 @@ export default function PageHero({
         >
           {eyebrow && <div className="overline mb-4">{eyebrow}</div>}
           <h1
-            className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.02] text-white tracking-tight"
+            className="font-display text-[40px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] md:leading-[1.02] text-white tracking-tight break-words"
             data-testid="page-heading"
           >
             {title}

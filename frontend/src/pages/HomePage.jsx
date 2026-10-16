@@ -28,7 +28,7 @@ export default function HomePage() {
               className="lg:col-span-5"
             >
               <PlaceholderImage
-                src={IMAGES}
+                src={IMAGES.about}
                 alt="Vegith Pinnacle operations"
                 aspect="aspect-[4/3]"
                 label="Since 2018"
@@ -130,7 +130,7 @@ export default function HomePage() {
           <div className="max-w-2xl mb-12">
             <div className="overline">Industries We Serve</div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mt-4 text-white leading-[1.05] ">
-              <span className="whitespace-nowrap">Integrated workplace solutions</span>
+              <span className="md:whitespace-nowrap">Integrated workplace solutions</span>
               <br />
               <span className="vp-gold-shimmer">across every vertical.</span>
             </h2>
@@ -201,14 +201,14 @@ export default function HomePage() {
                   Ready to partner?
                 </div>
                 <h3 className="mt-3 font-display text-3xl md:text-4xl lg:text-5xl leading-tight">
-                  <span className="whitespace-nowrap">Seamless facility staffing solutions for</span>
+                  <span className="md:whitespace-nowrap">Seamless facility staffing solutions for</span>
                   <br />
                   <span className="vp-gold-shimmer">
                     smarter, safer, sustainable businesses.
                   </span>
                 </h3>
               </div>
-              <div className="lg:col-span-4 flex justify-end items-end h-full">
+              <div className="lg:col-span-4 flex lg:justify-end items-end h-full">
   <PrimaryButton href="/contact" testid="home-cta-primary">
     Request Survey
   </PrimaryButton>

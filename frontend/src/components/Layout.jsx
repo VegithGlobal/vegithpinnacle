@@ -9,7 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Layout() {
   return (
-    <div className="App" data-testid="site-root">
+    <div className="App overflow-x-clip" data-testid="site-root">
       <GridBackground />
       <ScrollProgress />
       <ScrollToTop />

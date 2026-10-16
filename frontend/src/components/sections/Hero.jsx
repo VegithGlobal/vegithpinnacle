@@ -66,7 +66,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.15 }}
               data-testid="hero-headline"
-              className="font-display  md:text-6xl xl:text-[72px] leading-[1.02] text-white "
+              className="font-display text-[34px] sm:text-5xl md:text-6xl xl:text-[72px] leading-[1.1] md:leading-[1.02] text-white"
             >
               Manpower &
               <span className="vp-gold-shimmer font-bold"> Integrated  </span>  
@@ -148,22 +148,22 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4"
+          className="mt-12 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
           data-testid="hero-counters"
         >
           {HOME_COUNTERS.map((c, i) => (
             <div
               key={c.label}
-              className="vp-glass vp-soft-shadow rounded-3xl px-6 py-6 md:py-8 group hover:-translate-y-1 transition-transform"
+              className="vp-glass vp-soft-shadow rounded-3xl px-4 sm:px-6 py-5 sm:py-6 md:py-8 group hover:-translate-y-1 transition-transform"
               data-testid={`hero-counter-${i}`}
             >
               <AnimatedCounter
                 value={c.value}
                 suffix={c.suffix}
-                className="font-display text-5xl md:text-6xl text-white leading-none"
+                className="font-display text-4xl sm:text-5xl md:text-6xl text-white leading-none"
                 testid={`hero-counter-value-${i}`}
               />
-              <div className="mt-4 text-[11px] uppercase tracking-[0.22em] text-white/55 font-semibold">
+              <div className="mt-3 sm:mt-4 text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white/55 font-semibold">
                 {c.label}
               </div>
             </div>

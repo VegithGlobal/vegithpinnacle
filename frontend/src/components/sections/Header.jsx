@@ -119,7 +119,7 @@ export default function Header() {
                   data-testid={`mobile-nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
                   className={({ isActive }) =>
                     `py-3 font-medium border-b border-white/5 ${
-                      isActive ? "text-[#14387f]" : "text-white"
+                      isActive ? "text-[#f0c454]" : "text-white"
                     }`
                   }
                 >

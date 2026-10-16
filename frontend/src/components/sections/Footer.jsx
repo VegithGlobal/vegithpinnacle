@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="text-white/70 hover:text-[#f0c454] transition-colors text-sm"
+                    className="inline-block py-1.5 text-white/70 hover:text-[#f0c454] transition-colors text-sm"
                     data-testid={`footer-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
                   >
                     {l.label}
@@ -74,7 +74,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
-                  className="text-white/80 hover:text-[#f0c454] transition-colors"
+                  className="inline-block py-1.5 break-all text-white/80 hover:text-[#f0c454] transition-colors"
                   data-testid="footer-phone"
                 >
                   {CONTACT.phone}
@@ -83,7 +83,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="text-white/80 hover:text-[#f0c454] transition-colors"
+                  className="inline-block py-1.5 break-all text-white/80 hover:text-[#f0c454] transition-colors"
                   data-testid="footer-email"
                 >
                   {CONTACT.email}
@@ -92,7 +92,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`https://${CONTACT.website}`}
-                  className="text-white/80 hover:text-[#f0c454] transition-colors"
+                  className="inline-block py-1.5 break-all text-white/80 hover:text-[#f0c454] transition-colors"
                   data-testid="footer-website"
                 >
                   {CONTACT.website}
