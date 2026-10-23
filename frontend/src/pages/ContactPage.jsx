@@ -27,15 +27,8 @@ export default function ContactPage() {
     }
     setSubmitting(true);
     try {
-      const result = await sendEnquiry(form);
-      if (result === "mailto") {
-        toast.success(
-          `Your email app has opened with your enquiry — just press Send. Or call us on ${CONTACT.phone}.`,
-          { duration: 8000 }
-        );
-      } else {
-        toast.success("Thank you — our team will reach out within 24 hours.");
-      }
+      await sendEnquiry(form);
+      toast.success("Thank you — your enquiry has been sent. Our team will reach out within 24 hours.");
       setForm({
         name: "",
         email: "",
@@ -44,7 +37,10 @@ export default function ContactPage() {
         message: "",
       });
     } catch (err) {
-      toast.error(err?.message || "Something went wrong. Please try again.");
+      toast.error(
+        `Sorry, your enquiry couldn't be sent. Please email ${CONTACT.email} or call ${CONTACT.phone}.`,
+        { duration: 10000 }
+      );
     } finally {
       setSubmitting(false);
     }
