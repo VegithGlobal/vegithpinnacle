@@ -6,9 +6,8 @@ import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { PrimaryButton } from "@/components/PremiumButton";
 import { CONTACT, OFFICES, IMAGES } from "@/data/content";
 import { toast } from "sonner";
+import { sendEnquiry } from "@/lib/sendEnquiry";
 // import Presence from "@/components/sections/Presence";
-
-const API_BASE = process.env.REACT_APP_BACKEND_URL;
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -28,21 +27,15 @@ export default function ContactPage() {
     }
     setSubmitting(true);
     try {
-      const res = await fetch(`${API_BASE}/apigit status/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-  ...form,
-  website: "Vegith Pinnacle",
-}),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data?.detail || "Failed to send. Please try again.");
+      const result = await sendEnquiry(form);
+      if (result === "mailto") {
+        toast.success(
+          `Your email app has opened with your enquiry — just press Send. Or call us on ${CONTACT.phone}.`,
+          { duration: 8000 }
+        );
+      } else {
+        toast.success("Thank you — our team will reach out within 24 hours.");
       }
-      toast.success(
-        data?.message || "Thank you — our team will reach out within 24 hours."
-      );
       setForm({
         name: "",
         email: "",
@@ -128,6 +121,9 @@ export default function ContactPage() {
                   <Field
                     label="Full Name"
                     testid="contact-input-name"
+                    name="name"
+                    autoComplete="name"
+                    required
                     value={form.name}
                     onChange={(v) => setForm({ ...form, name: v })}
                     placeholder="Your name"
@@ -135,6 +131,9 @@ export default function ContactPage() {
                   <Field
                     label="Work Email"
                     testid="contact-input-email"
+                    name="email"
+                    autoComplete="email"
+                    required
                     type="email"
                     value={form.email}
                     onChange={(v) => setForm({ ...form, email: v })}
@@ -143,6 +142,8 @@ export default function ContactPage() {
                   <Field
                     label="Company"
                     testid="contact-input-company"
+                    name="company"
+                    autoComplete="organization"
                     value={form.company}
                     onChange={(v) => setForm({ ...form, company: v })}
                     placeholder="Company name"
@@ -157,6 +158,8 @@ export default function ContactPage() {
                         setForm({ ...form, interest: e.target.value })
                       }
                       data-testid="contact-input-interest"
+                      name="interest"
+                      aria-label="Interested in"
                       className="w-full vp-dark-input border border-white/15 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4a843] focus:ring-2 focus:ring-[#d4a843]/25 transition-all"
                     >
                       <option>Staffing Services</option>
@@ -179,6 +182,9 @@ export default function ContactPage() {
                     }
                     rows={5}
                     data-testid="contact-input-message"
+                    name="message"
+                    aria-label="Requirement"
+                    required
                     placeholder="Tell us about the sites, headcount and timelines…"
                     className="w-full vp-dark-input border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#d4a843] focus:ring-2 focus:ring-[#d4a843]/25 transition-all"
                   />
@@ -288,13 +294,17 @@ function ContactRow({ icon, label, value, href, testid }) {
   );
 }
 
-function Field({ label, value, onChange, type = "text", placeholder, testid }) {
+function Field({ label, value, onChange, type = "text", placeholder, testid, name, autoComplete, required }) {
   return (
     <div>
-      <label className="block text-[11px] uppercase tracking-[0.22em] text-white/55 mb-2 font-semibold">
+      <label htmlFor={testid} className="block text-[11px] uppercase tracking-[0.22em] text-white/55 mb-2 font-semibold">
         {label}
       </label>
       <input
+        id={testid}
+        name={name}
+        autoComplete={autoComplete}
+        required={required}
         type={type}
         value={value}
         placeholder={placeholder}

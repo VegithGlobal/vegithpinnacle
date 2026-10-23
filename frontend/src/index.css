@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+/* Fonts (Playfair Display, Manrope) are loaded via <link> in public/index.html */
 
 :root {
     --bg: #060d1e;

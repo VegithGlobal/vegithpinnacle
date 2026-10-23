@@ -35,7 +35,7 @@ export default function ServicesPage() {
             key={pillar.key}
             id={pillar.key}
             ref={(el) => (refs.current[pillar.key] = el)}
-            className="py-16 md:py-24 relative"
+            className="py-16 md:py-24 relative scroll-mt-16"
             data-testid={`service-section-${pillar.key}`}
           >
             <div className="container-x">

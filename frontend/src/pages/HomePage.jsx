@@ -29,8 +29,9 @@ export default function HomePage() {
             >
               <PlaceholderImage
                 src={IMAGES.about}
-                alt="Vegith Pinnacle operations"
+                alt="Kailash Sharma, Chairman and Founder of Vegith Pinnacle Services"
                 aspect="aspect-[4/3]"
+                position="object-top"
                 label="Since 2018"
               />
             </motion.div>
@@ -44,7 +45,7 @@ export default function HomePage() {
             >
               <div className="overline">The Vegith Pinnacle Vision</div>
               <h2 className="font-display text-4xl md:text-5xl mt-4 text-white leading-[1.05]">
-                Commitment. <span className="vp-gold-shimmer">Dedication.</span>Delivery 
+                Commitment. <span className="vp-gold-shimmer">Dedication.</span> Delivery.
               </h2>
               <p className="mt-5 text-white/70 text-lg leading-relaxed">
               To become Leading Manpower & integrated Facility Management 
@@ -208,8 +209,8 @@ export default function HomePage() {
                   </span>
                 </h3>
               </div>
-              <div className="lg:col-span-4 flex lg:justify-end items-end h-full">
-  <PrimaryButton href="/contact" testid="home-cta-primary">
+              <div className="lg:col-span-4 grid sm:flex lg:justify-end items-end h-full">
+  <PrimaryButton href="/contact" testid="home-cta-primary" className="w-full justify-center sm:w-auto">
     Request Survey
   </PrimaryButton>
 </div>

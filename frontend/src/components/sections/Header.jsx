@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { NAV_LINKS } from "@/data/content";
 import { PrimaryButton } from "@/components/PremiumButton";
-import logo from "@/img/logo.png";
+import logo from "@/img/logo.webp";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -40,7 +40,9 @@ export default function Header() {
            className="flex items-center">
            <img
             src={logo}
-            alt="Vegith Global"
+            alt="Vegith Pinnacle Services"
+            width="150"
+            height="56"
             className="h-14 w-auto object-contain"
             />
           </Link>
@@ -126,15 +128,6 @@ export default function Header() {
                   {l.label}
                 </NavLink>
               ))}
-              <div className="pt-4">
-                <PrimaryButton
-                  testid="mobile-cta-contact"
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                >
-                  Get in Touch
-                </PrimaryButton>
-              </div>
             </div>
           </motion.div>
         )}

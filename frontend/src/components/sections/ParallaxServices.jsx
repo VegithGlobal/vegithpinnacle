@@ -54,7 +54,7 @@ function MobileServices() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               data-testid={`home-service-${s.key}`}
             >
-              <Link to="/services" className="block group relative">
+              <Link to={`/services#${s.key}`} className="block group relative">
                 <div className="relative aspect-[16/10] rounded-[28px] overflow-hidden vp-soft-shadow">
                   <img
                     src={s.img}
@@ -174,7 +174,7 @@ export default function ParallaxServices() {
 
         {/* Center stage: thumbnail + title + CTA */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 pt-40 mt-10">
-          <Link to="/services" className="group flex flex-col items-center">
+          <Link to={`/services#${service.key}`} className="group flex flex-col items-center">
             <div className="relative w-60 md:w-80 lg:w-90 aspect-[8/6] rounded-[20px] overflow-hidden vp-soft-shadow ring-1 ring-white/15">
               {/*
                 Single source of truth for this element's motion: only the

@@ -3,7 +3,6 @@ import PageHero from "@/components/PageHero";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { ABOUT_STATS, WHY_US, IMAGES } from "@/data/content";
-import * as Icons from "lucide-react";
 
 
 const STATS_NUMERIC = [
@@ -28,7 +27,7 @@ export default function AboutPage() {
       {/* STORY */}
       <section className="pb-16 md:pb-24 relative">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10 items-Top">
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -38,8 +37,9 @@ export default function AboutPage() {
             >
               <PlaceholderImage
                 src={IMAGES.about}
-                alt="Vegith Pinnacle operations"
+                alt="Kailash Sharma, Founder of Vegith Pinnacle Services"
                 aspect="aspect-[2/3]"
+                position="object-top"
                 label="Est. 2018"
               />
             </motion.div>
@@ -57,37 +57,43 @@ export default function AboutPage() {
                 <br />
                 <span className="vp-gold-shimmer"> - Our Founder.</span>
               </h2>
-              <p className="mt-6 text-white/70 text-lg leading-relaxed">
-                Welcome to Vegith Pinnacle Services Private Limited Formerly known as
-                Vegith HR Services Pvt. Ltd.
-                <span>A Core Venture of the Vegith Group (Est. 2018)</span>
-                <br />
-                Since 2018, Vegith Pinnacle Services has emerged as a premier, fast-growing support services
-                leader within the dynamic Vegith Group ecosystem. Our mission is clear: to engineer absolute
-                operational efficiency through tailor-made, business-centric solutions.
-                <br />
-                 We streamline enterprise operations through two core execution engines:
-                 world-class Facility Management and an all-inclusive Staffing & Compliance
-                 Suite. Operating with a primary focus on agile, high-scale Temporary Staffing,
-                 our comprehensive workforce suite delivers custom manpower deployments, executive
-                 permanent placements, and end-to-end Labour Compliance under one seamless umbrella.
-                 We bring the practical insight, multi-disciplinary talent, and dedication needed to
-                 protect your bottom line and accelerate your corporate goals.{" "}
-                
-  
-              </p>
+              <div className="mt-6 space-y-4 text-white/70 text-base sm:text-lg leading-relaxed">
+                <p>
+                  Welcome to Vegith Pinnacle Services Private Limited, formerly
+                  known as Vegith HR Services Pvt. Ltd. — a core venture of the
+                  Vegith Group (Est. 2018).
+                </p>
+                <p>
+                  Since 2018, Vegith Pinnacle Services has emerged as a premier,
+                  fast-growing support services leader within the dynamic Vegith
+                  Group ecosystem. Our mission is clear: to engineer absolute
+                  operational efficiency through tailor-made, business-centric
+                  solutions.
+                </p>
+                <p>
+                  We streamline enterprise operations through two core execution
+                  engines: world-class Facility Management and an all-inclusive
+                  Staffing &amp; Compliance Suite. Operating with a primary focus on
+                  agile, high-scale Temporary Staffing, our comprehensive workforce
+                  suite delivers custom manpower deployments, executive permanent
+                  placements, and end-to-end Labour Compliance under one seamless
+                  umbrella. We bring the practical insight, multi-disciplinary
+                  talent, and dedication needed to protect your bottom line and
+                  accelerate your corporate goals.
+                </p>
+              </div>
 
-              <div className="mt-10 grid grid-cols-3 gap-4">
+              <div className="mt-10 grid grid-cols-3 gap-2 sm:gap-4">
                 {["Commitment", "Dedication", "Delivery"].map((v, i) => (
                   <div
                     key={v}
-                    className="vp-glass vp-soft-shadow rounded-2xl p-5 text-center"
+                    className="vp-glass vp-soft-shadow rounded-2xl px-2 py-4 sm:p-5 text-center"
                     data-testid={`about-value-${v.toLowerCase()}`}
                   >
                     <div className="font-display vp-gold-shimmer text-2xl">
                       0{i + 1}
                     </div>
-                    <div className="mt-2 text-white font-semibold tracking-wide text-sm">
+                    <div className="mt-2 text-white font-semibold text-xs sm:text-sm sm:tracking-wide break-words">
                       {v}
                     </div>
                   </div>
@@ -108,19 +114,19 @@ export default function AboutPage() {
               <span className="vp-gold-shimmer"> measured.</span>
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {STATS_NUMERIC.map((s, i) => (
               <div
                 key={s.label}
-                className="vp-glass vp-soft-shadow rounded-3xl px-6 py-8"
+                className="vp-glass vp-soft-shadow rounded-3xl px-4 py-6 sm:px-6 sm:py-8"
                 data-testid={`about-counter-${i}`}
               >
                 <AnimatedCounter
                   value={s.value}
                   suffix={s.suffix}
-                  className="font-display text-5xl md:text-6xl text-white leading-none"
+                  className="font-display text-4xl sm:text-5xl md:text-6xl text-white leading-none"
                 />
-                <div className="mt-4 text-[11px] uppercase tracking-[0.22em] text-white/55 font-semibold">
+                <div className="mt-3 sm:mt-4 text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white/55 font-semibold">
                   {s.label}
                 </div>
               </div>

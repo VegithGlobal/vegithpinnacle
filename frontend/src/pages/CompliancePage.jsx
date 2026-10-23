@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import * as Icons from "lucide-react";
+import { Icons } from "@/lib/icons";
 import { ChevronDown, ShieldCheck, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { PlaceholderImage } from "@/components/PlaceholderImage";

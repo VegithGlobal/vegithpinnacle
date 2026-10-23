@@ -1,7 +1,9 @@
 import { FaWhatsapp } from "react-icons/fa";
+import { CONTACT } from "@/data/content";
 
 export default function WhatsAppButton() {
-  const phone = "919876543210"; // Replace with your number
+  // wa.me needs the number as digits only, with country code (e.g. 919136407944)
+  const phone = (CONTACT.whatsapp || CONTACT.phone).replace(/\D/g, "");
   const message = encodeURIComponent(
     "Hello Vegith Pinnacle, I'm interested in your Staffing and Facility Management Services."
   );

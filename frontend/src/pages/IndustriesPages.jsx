@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { CLIENT_CATEGORIES, CLIENT_TAGS, IMAGES } from "@/data/content";
+import { CLIENT_CATEGORIES, CLIENT_TAGS } from "@/data/content";
 
 export default function ClientsPage() {
   return (
@@ -11,15 +11,14 @@ export default function ClientsPage() {
         title="A quiet portfolio of"
         titleGold="ambitious brands."
         tagline="Enterprises that treat workforce and facility excellence as a strategic advantage."
-        breadcrumbs={[{ label: "Clients" }]}
-        // image={IMAGES.about}
+        breadcrumbs={[{ label: "Industries" }]}
         testid="clients-hero"
       />
 
       {/* Category grid */}
       <section className="pb-16 md:pb-20" data-testid="client-categories">
         <div className="container-x">
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {CLIENT_CATEGORIES.map((c, i) => (
               <motion.div
                 key={c.key}

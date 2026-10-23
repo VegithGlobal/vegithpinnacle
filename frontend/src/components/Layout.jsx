@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import GridBackground from "@/components/GridBackground";
 import ScrollProgress from "@/components/ScrollProgress";
 import ScrollToTop from "@/components/ScrollToTop";
+import Seo from "@/components/Seo";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { Toaster } from "sonner";
@@ -13,6 +14,7 @@ export default function Layout() {
       <GridBackground />
       <ScrollProgress />
       <ScrollToTop />
+      <Seo />
       <Header />
       <main className="relative z-10 min-h-[70vh]">
         <Outlet />

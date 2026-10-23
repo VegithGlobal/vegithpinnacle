@@ -2,14 +2,14 @@
 // All image URLs point to editorial-quality Unsplash/Pexels photographs.
 // They are placeholders — swap the `img` value in each entry with the
 // client's own photographs after development.
-import about from "../img/Kailas_sir.png";
+import about from "../img/Kailas_sir.webp";
 import staffing from "../img/Services/staffing.webp";
 import softservices from "../img/Services/soft-services.webp";
 import technical from "../img/Services/technical.webp";
 import specialisedservice from "../img/Services/specialised-service.webp";
 
 // team//
-import ashishmishra from "../img/Ashish_mishra.jpeg";
+import ashishmishra from "../img/Ashish_mishra.webp";
 
 
 export const NAV_LINKS = [
@@ -50,32 +50,32 @@ export const WHY_US = [
   {
     title: "Comprehensive Solutions",
     tagline: "One partner across manpower & facilities.",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "24 × 7 Support",
     tagline: "Always-on operations desk.",
-    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Client-Centric",
     tagline: "Every SOP shaped to your scope.",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Cost Efficiency",
     tagline: "Optimised deployment models.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Compliance & Safety",
     tagline: "Audit-ready statutory shield.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Managed by Professionals",
     tagline: "HR & FM veterans, senior led.",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=70",
   },
 ];
 
@@ -264,7 +264,7 @@ export const COMPLIANCE_PILLARS = [
 export const LEADERS = [
   {
     photo: about,
-    initials: "—",
+    initials: "KS",
     name: "Kailash Sharma",
     honorific: "",
     role: "Chairman & Founder",
@@ -277,7 +277,7 @@ export const LEADERS = [
   },
   {
     photo: null,
-    initials: "L2",
+    initials: "OS",
     name: "Ojasvi Sharma",
     role: "DIRECTOR",
     qualification: "Mechanical Engineer",
@@ -289,7 +289,7 @@ export const LEADERS = [
   },
   {
     photo: null,
-    initials: "L3",
+    initials: "DS",
     name: "Dikshita Sharma",
     role: "DIRECTOR",
     qualification: "B.Tech & MS",
@@ -301,7 +301,7 @@ export const LEADERS = [
   },
   {
     photo: ashishmishra,
-    initials: "L4",
+    initials: "AM",
     name: "Ashish Mishra",
     role: "GROUP CFO",
     qualification: "Chartered Accountant (CA)",
@@ -313,8 +313,8 @@ export const LEADERS = [
   },
   {
     photo: null,
-    initials: "L5",
-    name: "Sneha Goasvi",
+    initials: "SG",
+    name: "Sneha Gosavi",
     role: "BUSINESS HEAD",
     qualification: "Masters in Labour Studies",
     experience: "18+ Years",
@@ -330,37 +330,37 @@ export const PROCESS_STEPS = [
   {
     title: "Client Requirement",
     tagline: "Deep-dive scoping & discovery.",
-    img: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Recruitment",
     tagline: "Sourcing & screening pipelines.",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Selection",
     tagline: "Interviews, BGV & documentation.",
-    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Deployment",
     tagline: "Onboarding & site mobilisation.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Operations",
     tagline: "Daily service delivery & QA.",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Compliance",
     tagline: "Statutory returns & audits.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Support",
     tagline: "Ongoing 24×7 helpdesk.",
-    img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=900&q=70",
   },
 ];
 
@@ -368,35 +368,35 @@ export const PROCESS_STEPS = [
 export const INDUSTRIES = [
   {
     name: "Manufacturing",
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=70",
   },
   {
     name: "Warehousing",
-    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=70",
   },
   {
     name: "Corporate Offices",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=70",
   },
   // {
   //   name: "Healthcare",
-  //   img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+  //   img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=70",
   // },
   {
     name: "Retail",
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=70",
   },
   // {
   //   name: "Education",
-  //   img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+  //   img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70",
   // },
   {
     name: "Hospitality",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=70",
   },
   {
     name: "Logistics",
-    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=70",
   },
 ];
 
@@ -482,42 +482,42 @@ export const CLIENT_CATEGORIES = [
   {
     key: "corporates",
     label: "Corporate & IT/ITES",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=70",
   },
   {
     key: "warehousing",
     label: "Warehousing & Logistics",
-    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=70",
   },
   {
     key: "manufacturing",
     label: "Manufacturing",
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=70",
   },
   {
     key: "retail",
     label: "Retail & Malls",
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=70",
   },
   // {
   //   key: "healthcare",
   //   label: "Healthcare",
-  //   img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80",
+  //   img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=70",
   // },
   {
     key: "hospitality",
     label: "Hospitality",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=70",
   },
   {
     key: "bfsi",
     label: "BFSI",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=70",
   },
   // {
   //   key: "education",
   //   label: "Education",
-  //   img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=80",
+  //   img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70",
   // },
 ];
 
@@ -571,7 +571,10 @@ export const OFFICES = [
 export const CONTACT = {
   phone: "+91 91364 07944",
   email: "Hr@vegithglobal.com",
-  website: "www.vegithhr.com",
+  // Number used by the floating WhatsApp button; defaults to `phone` if removed.
+  whatsapp: "+91 91364 07944",
+  // vegithhr.com (former name) no longer resolves over https/www, so link the live site.
+  website: "vegithpinnacle.com",
 };
 
 /* ---------- SOCIAL ----------
@@ -587,15 +590,15 @@ export const SOCIAL_LINKS = [
 /* ---------- SIGNATURE IMAGERY ---------- */
 export const IMAGES = {
   heroPoster:
-    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=900&q=70",
    about ,
    staffing,
   facility:
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=70",
   compliance:
-    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=70",
   contact:
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=70",
 };
 
 /* Backwards-compat exports still used by Header/older sections */

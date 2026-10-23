@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import * as Icons from "lucide-react";
+import { Icons } from "@/lib/icons";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { COMPLIANCE_ITEMS, IMAGES } from "@/data/content";
 

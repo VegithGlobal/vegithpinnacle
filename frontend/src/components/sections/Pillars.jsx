@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import * as Icons from "lucide-react";
+import { Icons } from "@/lib/icons";
 import { ArrowUpRight, Plus, Minus, Users2, Building2 } from "lucide-react";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { STAFFING_ITEMS, FACILITY_GROUPS, IMAGES } from "@/data/content";

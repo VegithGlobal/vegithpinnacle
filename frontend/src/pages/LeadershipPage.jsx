@@ -50,6 +50,7 @@ function FounderCard({ leader }) {
               src={leader.photo}
               alt={leader.name}
               aspect="aspect-[4/5]"
+              position="object-top"
               initials={leader.initials}
             />
             {/* founder badge */}
@@ -134,22 +135,30 @@ function FounderCard({ leader }) {
             ))}
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
-            <a
-              href={leader.linkedin || "#"}
-              className="inline-flex items-center gap-2 rounded-full w-10 h-10 justify-center text-white/70 hover:text-[#d4a843] border border-white/10 hover:border-[#d4a843]/50 transition-colors"
-              aria-label={`${leader.name} LinkedIn`}
-            >
-              <Linkedin size={15} />
-            </a>
-            <a
-              href={leader.email ? `mailto:${leader.email}` : "#"}
-              className="inline-flex items-center gap-2 rounded-full w-10 h-10 justify-center text-white/70 hover:text-[#d4a843] border border-white/10 hover:border-[#d4a843]/50 transition-colors"
-              aria-label={`${leader.name} Email`}
-            >
-              <Mail size={15} />
-            </a>
-          </div>
+          {(leader.linkedin || leader.email) && (
+            <div className="mt-8 flex items-center gap-3">
+              {leader.linkedin && (
+                <a
+                  href={leader.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full w-11 h-11 justify-center text-white/70 hover:text-[#d4a843] border border-white/10 hover:border-[#d4a843]/50 transition-colors"
+                  aria-label={`${leader.name} on LinkedIn`}
+                >
+                  <Linkedin size={15} />
+                </a>
+              )}
+              {leader.email && (
+                <a
+                  href={`mailto:${leader.email}`}
+                  className="inline-flex items-center gap-2 rounded-full w-11 h-11 justify-center text-white/70 hover:text-[#d4a843] border border-white/10 hover:border-[#d4a843]/50 transition-colors"
+                  aria-label={`Email ${leader.name}`}
+                >
+                  <Mail size={15} />
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -181,7 +190,7 @@ function LeaderCard({ leader, index, hovered, onHover, onLeave }) {
           src={leader.photo}
           alt={leader.name}
           aspect="aspect-[4/5]"
-          // label={`${leader.name} Photo`}
+          position="object-top"
           initials={leader.initials}
         />
 
@@ -214,7 +223,7 @@ function LeaderCard({ leader, index, hovered, onHover, onLeave }) {
           {leader.bio}
         </p>
 
-        <div className="flex flex-wrap gap-1.5">
+        <div className="mt-4 flex flex-wrap gap-1.5">
           {leader.focus.map((f) => (
             <span
               key={f}
@@ -225,30 +234,38 @@ function LeaderCard({ leader, index, hovered, onHover, onLeave }) {
           ))}
         </div>
 
-        <div className="mt-4 flex items-center gap-2">
-          <a
-            href={leader.linkedin || "#"}
-            className={`w-9 h-9 rounded-full flex items-center justify-center border transition-colors ${
-              isActive
-                ? "border-[#d4a843] text-[#d4a843] bg-[#d4a843]/10"
-                : "border-white/10 text-white/60 hover:text-[#d4a843] hover:border-[#d4a843]/50"
-            }`}
-            aria-label={`${leader.name} LinkedIn`}
-          >
-            <Linkedin size={14} />
-          </a>
-          <a
-            href={leader.email ? `mailto:${leader.email}` : "#"}
-            className={`w-9 h-9 rounded-full flex items-center justify-center border transition-colors ${
-              isActive
-                ? "border-[#d4a843] text-[#d4a843] bg-[#d4a843]/10"
-                : "border-white/10 text-white/60 hover:text-[#d4a843] hover:border-[#d4a843]/50"
-            }`}
-            aria-label={`${leader.name} Email`}
-          >
-            <Mail size={14} />
-          </a>
-        </div>
+        {(leader.linkedin || leader.email) && (
+          <div className="mt-4 flex items-center gap-2">
+            {leader.linkedin && (
+              <a
+                href={leader.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-10 h-10 rounded-full flex items-center justify-center border transition-colors ${
+                  isActive
+                    ? "border-[#d4a843] text-[#d4a843] bg-[#d4a843]/10"
+                    : "border-white/10 text-white/60 hover:text-[#d4a843] hover:border-[#d4a843]/50"
+                }`}
+                aria-label={`${leader.name} on LinkedIn`}
+              >
+                <Linkedin size={14} />
+              </a>
+            )}
+            {leader.email && (
+              <a
+                href={`mailto:${leader.email}`}
+                className={`w-10 h-10 rounded-full flex items-center justify-center border transition-colors ${
+                  isActive
+                    ? "border-[#d4a843] text-[#d4a843] bg-[#d4a843]/10"
+                    : "border-white/10 text-white/60 hover:text-[#d4a843] hover:border-[#d4a843]/50"
+                }`}
+                aria-label={`Email ${leader.name}`}
+              >
+                <Mail size={14} />
+              </a>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Hover glow */}

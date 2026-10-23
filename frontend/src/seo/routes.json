@@ -1,0 +1,56 @@
+{
+  "siteUrl": "https://vegithpinnacle.com",
+  "siteName": "Vegith Pinnacle Services",
+  "ogImage": "/og-image.jpg",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Vegith Pinnacle Services | Manpower & Facility Management Company in Mumbai",
+      "description": "Vegith Pinnacle Services Pvt. Ltd. provides staffing, manpower supply, housekeeping, technical and integrated facility management services to enterprises across India. Est. 2018, Mumbai.",
+      "changefreq": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "path": "/about",
+      "title": "About Us | Vegith Pinnacle Services – A Vegith Group Company",
+      "description": "Formerly Vegith HR Services, Vegith Pinnacle Services has delivered staffing, facility management and labour compliance for Indian enterprises since 2018.",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "path": "/leadership",
+      "title": "Leadership Team | Vegith Pinnacle Services",
+      "description": "Meet the leadership of Vegith Pinnacle Services – chartered accountants, engineers and labour-law specialists guiding our manpower and facility management practice.",
+      "changefreq": "monthly",
+      "priority": "0.6"
+    },
+    {
+      "path": "/services",
+      "title": "Services – Staffing, Housekeeping, Technical & Specialised Cleaning | Vegith Pinnacle",
+      "description": "Temporary staffing, permanent placement, housekeeping, pantry, front office, HVAC, electrical and plumbing operations, pest control and specialised deep-cleaning services across India.",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "path": "/compliance",
+      "title": "Labour & Payroll Compliance Services | Vegith Pinnacle Services",
+      "description": "In-house PF, ESIC, Professional Tax, LWF, UAN and payroll compliance management – audit-ready statutory compliance for contract workforces across India.",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "path": "/industries",
+      "title": "Industries We Serve | Vegith Pinnacle Services",
+      "description": "Manpower and facility management for corporate & IT/ITES, warehousing & logistics, manufacturing, retail & malls, hospitality and BFSI across India.",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Us | Vegith Pinnacle Services, Mumbai",
+      "description": "Talk to Vegith Pinnacle Services about staffing or facility management. Offices in Andheri East (Mumbai), Bhiwandi and beyond. Call +91 91364 07944.",
+      "changefreq": "yearly",
+      "priority": "0.7"
+    }
+  ]
+}

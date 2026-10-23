@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { PrimaryButton, GhostButton } from "@/components/PremiumButton";
@@ -5,7 +6,21 @@ import { VideoPlaceholder } from "@/components/PlaceholderImage";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { HOME_COUNTERS, IMAGES } from "@/data/content";
 
+// Skip the 2 MB background video for Data Saver / slow connections and
+// reduced-motion users; they get the still poster instead.
+function useShouldPlayVideo() {
+  const [play, setPlay] = useState(false);
+  useEffect(() => {
+    const c = navigator.connection;
+    const slow = c && (c.saveData || /(^|-)2g|3g/.test(c.effectiveType || ""));
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setPlay(!slow && !still);
+  }, []);
+  return play;
+}
+
 export default function Hero() {
+  const playVideo = useShouldPlayVideo();
   return (
     <section
       id="top"
@@ -14,17 +29,26 @@ export default function Hero() {
     >
       {/* Video background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={IMAGES.heroPoster}
-          className="absolute inset-0 h-full w-full object-cover"
-          data-testid="hero-bg-video"
-        >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
-        </video>
+        {playVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={IMAGES.heroPoster}
+            className="absolute inset-0 h-full w-full object-cover"
+            data-testid="hero-bg-video"
+          >
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={IMAGES.heroPoster}
+            alt=""
+            fetchpriority="high"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
 
         {/* Modern gradient overlay — brand navy/gold tint for text contrast */}
         <div
@@ -92,12 +116,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.45 }}
-              className="mt-8 flex flex-wrap items-center gap-3"
+              className="mt-8 grid grid-cols-1 sm:flex sm:flex-wrap items-center gap-3 max-w-sm sm:max-w-none"
             >
-              <PrimaryButton testid="hero-cta-primary" href="/services">
+              <PrimaryButton testid="hero-cta-primary" href="/services" className="w-full justify-center sm:w-auto">
                 Explore Services
               </PrimaryButton>
-              <GhostButton testid="hero-cta-secondary" href="/contact">
+              <GhostButton testid="hero-cta-secondary" href="/contact" className="w-full justify-center sm:w-auto">
                 Request Survey
               </GhostButton>
             </motion.div>

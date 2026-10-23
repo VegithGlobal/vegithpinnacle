@@ -18,6 +18,7 @@ export function PlaceholderImage({
   overlay = "gradient",
   rounded = "rounded-3xl",
   priority = false,
+  position = "object-center",
   testid,
   children,
 }) {
@@ -34,7 +35,7 @@ export function PlaceholderImage({
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onLoad={() => setLoaded(true)}
-          className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out ${
+          className={`absolute inset-0 h-full w-full object-cover ${position} transition-all duration-700 ease-out ${
             loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
           } group-hover:scale-[1.04]`}
         />
