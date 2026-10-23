@@ -40,12 +40,14 @@ function render(route) {
   return html;
 }
 
+// Write build/about.html (not build/about/index.html): GitHub Pages serves
+// about.html at /about with a 200, whereas a folder makes /about 301-redirect
+// to /about/, which would contradict the canonical URL.
 for (const route of seo.routes) {
   const out =
     route.path === "/"
       ? path.join(build, "index.html")
-      : path.join(build, route.path.slice(1), "index.html");
-  fs.mkdirSync(path.dirname(out), { recursive: true });
+      : path.join(build, `${route.path.slice(1)}.html`);
   fs.writeFileSync(out, render(route));
 }
 
