@@ -570,7 +570,7 @@ export const OFFICES = [
 /* ---------- CONTACT ---------- */
 export const CONTACT = {
   phone: "+91 91364 07944",
-  email: "Hr@vegithglobal.com",
+  email: "connect.hr@vegithglobal.com",
   // Number used by the floating WhatsApp button; defaults to `phone` if removed.
   whatsapp: "+91 91364 07944",
   // vegithhr.com (former name) no longer resolves over https/www, so link the live site.
