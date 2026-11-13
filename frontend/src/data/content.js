@@ -10,6 +10,7 @@ import specialisedservice from "../img/Services/specialised-service.webp";
 
 // team//
 import ashishmishra from "../img/Ashish_mishra.webp";
+import snehagosavi from "../img/Sneha_gosavi.webp";
 
 
 export const NAV_LINKS = [
@@ -312,7 +313,7 @@ export const LEADERS = [
     email: "ashish.mishra@vegithglobal.com",
   },
   {
-    photo: null,
+    photo: snehagosavi,
     initials: "SG",
     name: "Sneha Gosavi",
     role: "BUSINESS HEAD",
