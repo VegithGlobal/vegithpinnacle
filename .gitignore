@@ -90,3 +90,6 @@ frontend/node_modules/.cache/default-development/7.pack
 frontend/node_modules/.cache/default-development/12.pack
 frontend/node_modules/.cache/default-development/14.pack
 
+
+# Hostinger upload package (rebuilt from html-site/ when needed)
+vegithpinnacle-hostinger.zip
